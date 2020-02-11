@@ -1,32 +1,29 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div>
+      <router-link to="/home" active-class="ac">首页</router-link>
+      <router-link to="/list" active-class="ac">列表</router-link>
+      <router-link to="/mine" active-class="ac">我的</router-link>
     </div>
-    <router-view/>
+      <!--就是为了让路由组件显示出来-->
+    <router-view></router-view>
   </div>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+  // .router-link-active{
+  //   color:red;
+  // }
+  .router-link-exact-active{
+    color:green;
   }
-}
+  .ac{
+    color:skyblue;
+  }
 </style>
+
+<script>
+  export default{
+      
+  }
+</script>  
